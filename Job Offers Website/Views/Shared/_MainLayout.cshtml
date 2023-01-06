@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial scale=1" />
+        <title>@Page.Title</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">
+                        <img src="~/images/logo.PNG" class="logo-size"/>
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            
+                        <a href="#"><i class="glyphicon glyphicon-home"></i>الرئيسية</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="glyphicon glyphicon-folder-open"></i>أصناف العروض</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="glyphicon glyphicon-info-sign"></i>حول الموقع</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="glyphicon glyphicon-envelope"></i>اتصل بنا</a>
+                        </li>
+
+                    </ul>
+
+                    <!--Partial Login-->
+                    @Html.Partial("_Login");
+                </div>
+            </div>
+
+        </nav>
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+
+
+       
+
+
+        <!--Footer-->
+        <footer class="myfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3><i class="glyphicon glyphicon-question-sign"></i>من نحن؟</h3>
+                        <p>
+                            وظف هي منصة عربية للعمل عن بعد تعمل منذ عام 2021 على توفير فرص عمل عبر الإنترنت، حيث يجمع الموقع بين كلاً من المستقلين الباحثين عن فرص عمل عبر الإنترنت وكذلك أصحاب الأعمال والمشروعات الذين يبحثون عن محترفين لتنفيذ وإدارة أعمالهم عن بعد.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-globe"></i>
+                            روابط هامة
+                        </h3>
+                        <ul>
+                            <li><a href="#">وظائف للقطاع العام</a></li>
+                            <li><a href="#">وظائف للقطاع الخاص</a></li>
+                            <li><a href="#">وظائف خارج البلاد</a></li>
+                            <li><a href="#">وظائف متنوعة</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            تواصل معنا
+                        </h3>
+                        <ul>
+                            <li><a href="#">صفحتنا على الفيسبوك</a></li>
+                            <li><a href="#">تابعنا على تويتر</a></li>
+                            <li><a href="#">شاهدنا على اليتويوب</a></li>
+                            <li><a href="#">اترك لنا رسالة</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="subfooter">
+                <p>
+                    جميع الحقوق محفوظة لموقع التوظيف
+                </p>
+            </div>
+        </footer>
+
+        <script src="~/scripts/jquery.js"></script>
+        <script src="~/scripts/bootstrap.min.js"></script>
+
+        @RenderSection("script",required:false)
+
+    </body>
+</html>

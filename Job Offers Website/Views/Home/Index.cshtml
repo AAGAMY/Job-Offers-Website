@@ -1,0 +1,38 @@
+﻿@model System.Collections.Generic.List<Job_Offers_Website.Models.Category>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>مرحباً بك عزيزي الزائر</h1>
+    <p class="lead">مرحباً بك فى فضاء البحث عن الوظائف بمختلف اصنافها, يمكنك نشر وظيفة ان كنت ناشراً ويمكنك التقدم الى وظيفة ان كنت تبحث عن عمل</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">المزيد من التفاصيل &raquo;</a></p>
+</div>
+
+@foreach (var item in Model)
+{
+    <h1>@Html.DisplayFor(modeItem => item.CategoryName)</h1>
+    <h5>@Html.DisplayFor(modeItem => item.CategoryDescription)</h5>
+
+
+    <div class="row">
+        @foreach (var subItem in item.Jobs)
+        {
+
+
+
+            <div class="col-md-3 thumbnail">
+                <img src="~/Uploads/@subItem.JobImage" style="width:275px; height:275px; " />
+                <h3>@Html.DisplayFor(modelItem => subItem.JobTitle)</h3>
+                <h5>@Html.DisplayFor(modelItem => subItem.JobContent)</h5>
+                @Html.ActionLink("التفاصيل", "Details", new { JobID = subItem.ID }, new { @class = "btn btn-primary" })
+
+            </div>
+        }
+    </div>
+
+}
+
+

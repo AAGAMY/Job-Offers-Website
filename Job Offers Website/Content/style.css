@@ -1,0 +1,77 @@
+﻿@font-face{
+    font-family:myfont;
+    src:url('font/GE_SS_Two_Bold.otf')
+}
+@font-face{
+    font-family:myfont2;
+    src:url('font/DroidKufi-Regular.ttf')
+}
+
+body{
+    padding-top:100px;
+}
+.navbar-default{
+    background-color: #6B5094;
+    border-color: #e7e7e7;
+    
+}
+
+.navbar-default .navbar-nav>li>a{
+    color:#E0E0E0;
+    font-family:myfont;
+    margin-right:10px;
+}
+
+.navbar-default .navbar-nav>li>a>i{
+    margin:5px;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color:#FAFAFA;
+    
+}
+
+.nav li{
+    position:relative;
+    display:block;
+    height:70px;
+    padding:10px;
+}
+
+.nav li:hover{
+    color:#FAFAFA;
+
+}
+
+.myfooter{
+    background-color:#6B5094;
+    padding-top:10px;
+    font-family:myfont;
+    text-align:justify; 
+}
+
+.subfooter{
+    background-color:#65479a;
+    color:#E0E0E0;
+    padding:10px;
+    text-align:center; 
+}
+
+.subfooter p{
+    margin:10px;
+}
+
+.myfooter a{
+    color:azure;
+}
+
+.myfooter h3,ul,p{
+    margin-bottom:20px;
+    font-family:myfont2;
+}
+
+.logo-size{
+
+    width:120px;
+    height:66px;
+    margin-top:-11px;
+}
